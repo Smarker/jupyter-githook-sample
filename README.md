@@ -11,12 +11,13 @@ easily be transitioned from exploration to production.
 hooks directory. In this case, we decided to use `.githooks` as our hooks
 directory. The hooks will trigger actions at certain points in git’s execution.
 
-For example, the [pre-commit](https://git-scm.com/docs/githooks#_pre_commit)
+For example, the [pre-commit](https://git-scm.com/docs/githooks#_pre_commit),
+is invoked before obtaining the proposed commit log message and making a commit.
 
 ## Setup Requirements
 
 * Git version `>=2.9` installed on your system.
-* `pre-commit.sh` **must** have the executable bit set. (`chmod +x precommit.sh`)
+* `pre-commit.sh` must have the executable bit set. (`chmod +x precommit.sh`)
 
 ## Setup
 
