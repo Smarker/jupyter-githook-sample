@@ -17,7 +17,9 @@ is invoked before obtaining the proposed commit log message and making a commit.
 ## Setup Requirements
 
 * Git version `>=2.9` installed on your system.
-* `pre-commit.sh` must have the executable bit set. (`chmod +x precommit.sh`)
+* Filenames **must not contain spaces**.
+* `notebooks`, `scripts`, and `html` folders must exist at the root of your
+project.
 
 ## Setup
 
