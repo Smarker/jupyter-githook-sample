@@ -18,22 +18,40 @@ is invoked before obtaining the proposed commit log message and making a commit.
 
 * Git version `>=2.9` installed on your system.
 * Filenames **must not contain spaces**.
-* `notebooks`, `scripts`, and `html` folders must exist at the root of your
-project.
+* `jq`
 
 ## Setup
 
-To configure the `pre-commit` hook for your project, run:
+Create an `.env` file and specify `NOTEBOOKS_PATH`, `SCRIPTS_PATH`, and
+`HTML_PATH`.
+
+For example:
 
 ```sh
+export NOTEBOOKS_PATH="notebooks"
+export SCRIPTS_PATH="scripts"
+export HTML_PATH="html"
+```
+
+Run:
+
+```sh
+source .env
 make
 ```
 
-This will run:
+This will set up the git hooks directory to point to a directory
+called `.githooks`. Now, whenever you commit, the `pre-commit` hook will run.
+
+Add and commit your changed notebook files to git.
 
 ```sh
-git config core.hooksPath .githooks
+git add .
+git commit -m "Added iris exploration notebook."
 ```
 
-What this will do will set up the git hooks directory to point to a directory
-called `.githooks`.
+## FAQ
+
+If you encounter an error when saving `.ipynb` file as a script, such as
+`mv: cannot stat 'notebooks/iris_exploration.py': No such file or directory`,
+you should restart the jupyter server and try again.
