@@ -1,7 +1,7 @@
 
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 import matplotlib.pyplot as plt
@@ -10,7 +10,7 @@ from sklearn import datasets
 from sklearn.decomposition import PCA
 
 
-# In[ ]:
+# In[2]:
 
 
 iris = datasets.load_iris()
